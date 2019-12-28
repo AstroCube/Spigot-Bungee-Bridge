@@ -16,9 +16,9 @@
     <dependencies>
         <!-- bundled with spigot, should keep in sync -->
         <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-chat</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <groupId>net.seocraft</groupId>
+            <artifactId>waterfall-chat</artifactId>
+            <version>1.8</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
