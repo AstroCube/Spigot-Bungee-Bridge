@@ -19,8 +19,6 @@
             <groupId>net.seocraft</groupId>
             <artifactId>waterfall-chat</artifactId>
             <version>1.8</version>
-            <type>jar</type>
-            <scope>provided</scope>
         </dependency>
 
         <!-- bundled with fdSpigot, should keep in sync -->
