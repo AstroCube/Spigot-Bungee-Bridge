@@ -16,9 +16,9 @@
     <dependencies>
         <!-- bundled with spigot, should keep in sync -->
         <dependency>
-            <groupId>net.seocraft</groupId>
+            <groupId>io.github.waterfallmc</groupId>
             <artifactId>waterfall-chat</artifactId>
-            <version>1.8</version>
+            <version>1.16-R0.5-SNAPSHOT</version>
         </dependency>
 
         <!-- bundled with fdSpigot, should keep in sync -->
