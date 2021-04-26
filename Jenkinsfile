@@ -18,8 +18,8 @@ pipeline {
                configFileProvider([configFile(fileId: 'b8e2316f-5cad-48e6-ab64-1afae45b71b3', variable: 'MAVEN_SETTINGS')]) {
                    dir('Waterfall') {
                        git url: 'https://github.com/AstroCube/Waterfall.git'
+                       sh './waterfall build'
                    }
-                   sh 'mvn -s $MAVEN_SETTINGS package'
                }
             }
         }
