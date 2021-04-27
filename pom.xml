@@ -13,6 +13,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>maven-public</id>
+            <url>https://repo.astrocube.net/repository/maven-public</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- bundled with spigot, should keep in sync -->
         <dependency>
