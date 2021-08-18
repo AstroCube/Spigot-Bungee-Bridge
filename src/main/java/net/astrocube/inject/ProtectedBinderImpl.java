@@ -6,7 +6,7 @@ import com.google.inject.PrivateBinder;
 
 public class ProtectedBinderImpl implements ProtectedBinder {
 
-    private static Class[] SKIP = new Class[]{
+    private static final Class<?>[] SKIP = {
             ForwardingBinder.class,
             ForwardingPrivateBinder.class,
             ForwardingProtectedBinder.class,

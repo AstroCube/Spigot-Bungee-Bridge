@@ -17,8 +17,6 @@ import com.google.inject.Module;
  */
 public abstract class ProtectedModule implements Module, ForwardingProtectedBinder {
 
-    protected void configure() {}
-
     private final Object moduleKey;
     private ProtectedBinder binder;
 
@@ -30,21 +28,7 @@ public abstract class ProtectedModule implements Module, ForwardingProtectedBind
         this(null);
     }
 
-    @Override
-    public int hashCode() {
-        return moduleKey != null ? moduleKey.hashCode()
-                : super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(moduleKey != null) {
-            return obj != null &&
-                    getClass().equals(obj.getClass()) &&
-                    moduleKey.equals(((ProtectedModule) obj).moduleKey);
-        } else {
-            return super.equals(obj);
-        }
+    protected void configure() {
     }
 
     @Override
@@ -53,7 +37,7 @@ public abstract class ProtectedModule implements Module, ForwardingProtectedBind
     }
 
     protected final ProtectedBinder binder() {
-        if(binder == null) {
+        if (binder == null) {
             throw new IllegalStateException("Binder is only usable during configuration");
         }
         return binder;
@@ -61,10 +45,10 @@ public abstract class ProtectedModule implements Module, ForwardingProtectedBind
 
     @Override
     public final void configure(Binder binder) {
-        final ProtectedBinder old = this.binder;
+        ProtectedBinder old = this.binder;
         this.binder = ProtectedBinderImpl.current(binder);
         try {
-            if(this.binder != null) {
+            if (this.binder != null) {
                 configure();
             } else {
                 binder.skipSources(ProtectedModule.class).addError(
@@ -77,4 +61,23 @@ public abstract class ProtectedModule implements Module, ForwardingProtectedBind
             this.binder = old;
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (moduleKey != null) {
+            return obj != null &&
+                    getClass().equals(obj.getClass()) &&
+                    moduleKey.equals(((ProtectedModule) obj).moduleKey);
+        } else {
+            return super.equals(obj);
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return moduleKey != null
+                ? moduleKey.hashCode()
+                : super.hashCode();
+    }
+
 }
