@@ -1,6 +1,6 @@
-package me.fixeddev.minecraft.player;
+package net.astrocube.minecraft.player;
 
-import me.fixeddev.minecraft.CommandSender;
+import net.astrocube.minecraft.CommandSender;
 
 import java.net.InetSocketAddress;
 import java.util.UUID;

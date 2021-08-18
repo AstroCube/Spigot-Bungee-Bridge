@@ -1,4 +1,4 @@
-package me.fixeddev.inject;
+package net.astrocube.inject;
 
 import com.google.inject.Key;
 import com.google.inject.PrivateBinder;

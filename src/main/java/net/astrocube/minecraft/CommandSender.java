@@ -1,4 +1,4 @@
-package me.fixeddev.minecraft;
+package net.astrocube.minecraft;
 
 public interface CommandSender {
 

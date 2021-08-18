@@ -1,4 +1,4 @@
-package me.fixeddev.inject;
+package net.astrocube.inject;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;

@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.fixeddev</groupId>
-    <artifactId>Spigot-BungeeBridge</artifactId>
-    <version>1.8-SNAPSHOT</version>
+    <groupId>net.astrocube</groupId>
+    <artifactId>spigot-bungee-bridge</artifactId>
+    <version>1.17.1-R0.1-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
     <repositories>
@@ -32,14 +32,8 @@
         <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
-            <version>4.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-multibindings</artifactId>
-            <version>4.0</version>
-            <scope>compile</scope>
+            <version>5.0.1</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

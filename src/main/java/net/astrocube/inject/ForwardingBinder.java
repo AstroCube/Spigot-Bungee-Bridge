@@ -1,4 +1,4 @@
-package me.fixeddev.inject;
+package net.astrocube.inject;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

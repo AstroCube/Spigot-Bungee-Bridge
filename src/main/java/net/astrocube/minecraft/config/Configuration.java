@@ -1,4 +1,4 @@
-package me.fixeddev.minecraft.config;
+package net.astrocube.minecraft.config;
 
 import java.util.Collection;
 
